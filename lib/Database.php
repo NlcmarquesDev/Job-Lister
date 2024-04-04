@@ -60,6 +60,7 @@ class Database
 
     public function execute()
     {
+        var_dump($this->stmt);
         return $this->stmt->execute();
     }
     public function resultSet()

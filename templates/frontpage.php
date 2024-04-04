@@ -94,6 +94,7 @@
             <?php endforeach; ?>
 
         </div>
+        <?php displayMessage(); ?>
     </div>
 
     <?php include './includes/footer.php'; ?>
