@@ -1,9 +1,10 @@
-            <footer class="pt-3 mt-4 text-body-secondary border-top">
-                &copy; 2024
-            </footer>
-            </div>
-            </main>
+<div class="container py-4">
+    <footer class="pt-3 mt-4 text-body-secondary border-top">
+        &copy; 2024
+    </footer>
+</div>
+</main>
 
-            </body>
+</body>
 
-            </html>
+</html>

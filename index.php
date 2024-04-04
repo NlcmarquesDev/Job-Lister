@@ -12,7 +12,7 @@ $template = new Template('templates/frontpage.php');
 $category = isset($_GET['category']) ? $_GET['category'] : null;
 
 if ($category > 0) {
-    $template->title = 'Latest Jobs from ' . $job->getCategory($category);
+    $template->title = 'Jobs in ' . $job->getCategory($category);
     $template->jobs = $job->getByCategory($category);
 } else {
     $template->title = 'Latest Jobs';

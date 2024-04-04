@@ -60,4 +60,17 @@ class Job
 
         return $results[0]->name;
     }
+
+    public function getJob($job_id)
+    {
+        $this->db->query("SELECT * FROM jobs 
+        WHERE jobs.id = $job_id");
+        // $this->db->query("SELECT * FROM jobs");
+
+        //assign Result Set
+        $results = $this->db->resultSet();
+        // var_dump($results);
+
+        return $results[0];
+    }
 }

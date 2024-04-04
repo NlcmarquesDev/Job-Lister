@@ -80,19 +80,20 @@
             </div>
         </div>
         <h3><?php echo $title ?></h3>
-        <div class="row align-items-md-stretch my-4">
+        <div class="row align-items-md-stretch ">
             <?php foreach ($jobs as $key => $job) : ?>
-                <div class="col-md-6">
+                <div class="col-md-6 my-3">
                     <div class="h-100 p-5 <?php echo ($key % 2 == 0) ? 'text-bg-dark' : 'bg-body-tertiary border' ?> rounded-3">
                         <h2><?php echo $job->job_title ?></h2>
 
                         <p><?php
                             echo $job->description ?></p>
-                        <button class="btn btn-outline-<?php echo ($key % 2 == 0) ? 'light' : 'secondary' ?>" type="button">View Details</button>
+                        <a href="job.php?id=<?php echo $job->id ?>" class="btn btn-outline-<?php echo ($key % 2 == 0) ? 'light' : 'secondary' ?>" type="button">View Details</a>
                     </div>
                 </div>
             <?php endforeach; ?>
 
         </div>
+    </div>
 
-        <?php include './includes/footer.php'; ?>
+    <?php include './includes/footer.php'; ?>
