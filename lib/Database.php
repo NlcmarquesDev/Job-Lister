@@ -60,8 +60,16 @@ class Database
 
     public function execute()
     {
-        var_dump($this->stmt);
         return $this->stmt->execute();
+        // try {
+        //     // Execute the prepared statement
+        //     return $this->stmt->execute();
+        // } catch (PDOException $e) {
+        //     // Log the error message
+        //     error_log($e->getMessage(), 3, '/var/log/php_error.log');
+        //     // Throw a custom exception
+        //     throw new Exception('An error occurred while executing the query.');
+        // }
     }
     public function resultSet()
     {

@@ -53,7 +53,6 @@ class Job
         $this->db->query("SELECT name FROM categories 
         WHERE categories.id = $category");
         // $this->db->query("SELECT * FROM jobs");
-
         //assign Result Set
         $results = $this->db->resultSet();
         // var_dump($results);
@@ -76,33 +75,20 @@ class Job
     //Create Job
     public function create($data)
     {
-        // $this->db->query("INSERT INTO jobs (category_id, job_title, company, description, location, salary, contact_user, contact_email) VALUES (:category_id, :job_title, :company, :description, :location, :salary, :contact_user, :contact_email)");
-        // //Bind Data
-        // $this->db->bind(':category_id', $data['category_id']);
-        // $this->db->bind(':job_title', $data['job_title']);
-        // $this->db->bind(':company', $data['company']);
-        // $this->db->bind(':description', $data['description']);
-        // $this->db->bind(':location', $data['location']);
-        // $this->db->bind(':salary', $data['salary']);
-        // $this->db->bind(':contact_user', $data['contact_user']);
-        // $this->db->bind(':contact_email', $data['contact_email']);
-        $sql = "INSERT INTO jobs (category_id, job_title, company, description, location, salary, contact_user, contact_email)
-                VALUES (:category_id, :job_title, :company, :description, :location, :salary, :contact_user, :contact_email)";
+        $this->db->query("INSERT INTO jobs (category_id, job_title, company, description, location, salary, contact_user, contact_email) VALUES (:category_id, :job_title, :company, :description, :location, :salary, :contact_user, :contact_email)");
+        //Bind Data
+        $this->db->bind(':category_id', $data['category_id']);
+        $this->db->bind(':job_title', $data['job_title']);
+        $this->db->bind(':company', $data['company']);
+        $this->db->bind(':description', $data['description']);
+        $this->db->bind(':location', $data['location']);
+        $this->db->bind(':salary', $data['salary']);
+        $this->db->bind(':contact_user', $data['contact_user']);
+        $this->db->bind(':contact_email', $data['contact_email']);
 
-
-        $this->db->query($sql);
-
-        $this->db->bind(':category_id', $data['category_id'], PDO::PARAM_INT); // Ensure integer for category_id (if applicable)
-        $this->db->bind(':job_title', $data['job_title'], PDO::PARAM_STR);
-        $this->db->bind(':description', $data['description'], PDO::PARAM_STR);
-        $this->db->bind(':location', $data['location'], PDO::PARAM_STR);
-        $this->db->bind(':salary', $data['salary'], PDO::PARAM_STR); // Assuming salary is stored as a string
-        $this->db->bind(':contact_user', $data['contact_user'], PDO::PARAM_STR);
-        $this->db->bind(':contact_email', $data['contact_email'], PDO::PARAM_STR);
+        // $this->db->execute();
 
         if ($this->db->execute()) {
-            var_dump($data);
-
             return true;
         } else {
             return false;

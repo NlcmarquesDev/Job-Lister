@@ -79,6 +79,7 @@
                 </form>
             </div>
         </div>
+        <?php displayMessage(); ?>
         <h3><?php echo $title ?></h3>
         <div class="row align-items-md-stretch ">
             <?php foreach ($jobs as $key => $job) : ?>
@@ -94,7 +95,6 @@
             <?php endforeach; ?>
 
         </div>
-        <?php displayMessage(); ?>
     </div>
 
     <?php include './includes/footer.php'; ?>
