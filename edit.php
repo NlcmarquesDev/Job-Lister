@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ($job->update($job_id, $data)) {
+        echo 'updated';
 
         redirect('index.php', 'Your job has been updated', 'success');
     } else {
@@ -28,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-$template->job = $job->getJob($job_id);
 $template->categories = $job->getCategories();
+$template->job = $job->getJob($job_id);
 
 echo $template;
