@@ -94,4 +94,20 @@ class Job
             return false;
         }
     }
+
+    public function update($id, $data)
+    {
+    }
+
+    public function delete($id)
+    {
+
+        $this->db->query("DELETE FROM jobs WHERE id = $id");
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

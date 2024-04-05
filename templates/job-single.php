@@ -19,5 +19,12 @@
     </ul>
     <br><br>
     <a href="index.php">Go Back</a>
+    <div class="well m-5 d-flex gap-3">
+        <a href="edit.php?id=<?php echo $job->id ?>" class="btn btn-primary btn-lg">Edit</a>
+        <form action="job.php" method="POST">
+            <input type="hidden" name="del_id" value="<?php echo $job->id ?>">
+            <input type="submit" value="Delete" class="btn btn-danger btn-lg">
+        </form>
+    </div>
 </div>
 <?php include './includes/footer.php'; ?>

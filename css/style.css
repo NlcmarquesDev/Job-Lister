@@ -75,3 +75,6 @@
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
 }
+.well {
+  background-color: rgb(206, 200, 200);
+}
