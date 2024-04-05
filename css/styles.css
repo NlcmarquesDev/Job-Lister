@@ -75,6 +75,31 @@
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
 }
-.well {
-  background-color: rgb(206, 200, 200);
+
+.pagination a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--bs-btn-bg);
+  padding: 10px 20px;
+  border: thin solid #555;
+  font-size: 18px;
+}
+.pagination a.active {
+  background-color: #0d81cd;
+  color: #fff;
+  border: thin solid 0d81cd;
+}
+.pagination a:focus {
+  border: 1px solid #00ff00;
+}
+.page-info {
+  margin-top: 90px;
+  font-style: 18px;
+  font-weight: bold;
+}
+.pagination {
+  margin-top: 20px;
+}
+.page-numbers {
+  display: inline-block;
 }
