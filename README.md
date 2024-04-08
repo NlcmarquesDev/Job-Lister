@@ -2,6 +2,18 @@
 
 This project is a simple job search system built using PHP and MySQL. It allows users to post job openings and for candidates to search for positions based on their qualifications.
 
+## Screenshots
+sample_job
+
+https://github.com/NlcmarquesDev/Job-Lister/assets/111293493/1be3de7d-423f-4f4b-962a-530f5b654cec
+
+
+
+![My image](/assets/images/photo1.png)
+![My image](/assets/images/photo2.png)
+![My image](/assets/images/photo3.png)
+![My image](/assets/images/photo4.png)
+
 ## Features
 
 - Category Filter: Users can filter job postings by category, such as "Technology", "Marketing", or "Sales".
@@ -53,10 +65,4 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-## Screenshots
 
-![My video](/assets/sample.mov)
-![My image](/assets/images/photo1.png)
-![My image](/assets/images/photo2.png)
-![My image](/assets/images/photo3.png)
-![My image](/assets/images/photo4.png)
