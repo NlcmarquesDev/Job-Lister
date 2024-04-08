@@ -10,19 +10,32 @@ class Job
         $this->db = new Database;
     }
     // get all jobs
-    public function getAllJobs()
+    public function getAllJobs($start = 0)
     {
+
+        $rows_per_page = 6;
+
         $this->db->query("SELECT jobs.*, categories.name AS cname 
                         From jobs
                         INNER JOIN categories
                         ON jobs.category_id = categories.id
-                        ORDER BY post_date DESC");
+                        ORDER BY post_date DESC 
+                        LIMIT $start, $rows_per_page");
         // $this->db->query("SELECT * FROM jobs");
 
         //assign Result Set
         $results = $this->db->resultSet();
 
         return $results;
+    }
+    public function getPagination()
+    {
+        $this->db->query("SELECT * FROM jobs");
+        $results = $this->db->resultSet();
+        $nr_of_rows = count($results);
+
+        $pages = ceil($nr_of_rows / 6);
+        return $pages;
     }
 
     public function getCategories()

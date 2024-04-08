@@ -19,6 +19,18 @@ if ($category > 0) {
     $template->jobs = $job->getAllJobs();
 }
 
+//Pagination
+
+
+$template->pages = $job->getPagination();
+
+if (isset($_GET['page-nr'])) {
+    $page = $_GET['page-nr'] - 1;
+    $start = $page *  6;
+    $template->jobs = $job->getAllJobs($start);
+}
+
+
 
 $template->categories = $job->getCategories();
 
